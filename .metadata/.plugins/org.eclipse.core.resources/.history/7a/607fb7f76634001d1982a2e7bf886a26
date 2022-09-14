@@ -1,0 +1,7 @@
+package chess;
+
+import boardgame.Board;
+
+public class chessMatch {
+	private Board chessBoard;
+}
