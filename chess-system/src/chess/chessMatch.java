@@ -11,7 +11,7 @@ public class chessMatch {
 	
 	public chessMatch() {
 		board = new Board(8, 8);//inicia o tabuleiro 8x8
-		initialSetup();
+		initialSetup();  //configuracao inicial do tabuleiro
 	}
 	//metodo para retornar a matriz de pecas.
 	public ChessPiece[][] getPieces(){
