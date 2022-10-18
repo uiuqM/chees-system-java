@@ -7,7 +7,7 @@ public class Board {
 	private Piece[][] pieces;
 	
 	public Board(int rows, int columns) {
-		if(rows>1 || columns>1) { //Teste de quantidade de linhas e colunas no tabuleiro.
+		if(rows < 1 || columns < 1) { //Teste de quantidade de linhas e colunas no tabuleiro.
 			throw new BoardException("Error creating board: there must be at least 1 row and 1 column");
 		}
 		this.rows = rows;
@@ -46,7 +46,7 @@ public class Board {
 	}
 	
 	private boolean positionExists(int row, int column) {
-		return row >= 0 && row < rows && column > 0 && column < columns;
+		return row >= 0 && row < rows && column >= 0 && column < columns;
 	}
 	
 	public boolean positionExists(Position position) {
