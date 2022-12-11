@@ -6,6 +6,7 @@ import java.util.Scanner;
 import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
+import chess.chessMatch;
 
 //Classe para imprimer o tabuleiro de xadrez.
 public class UI {
@@ -45,6 +46,13 @@ public class UI {
 		catch(RuntimeException e){
 			throw new InputMismatchException("Erro reading ChessPosition");
 		}
+	}
+	
+	public static void printMatch(chessMatch chessMatch) {
+		printBoard(chessMatch.getPieces());
+		System.out.println();
+		System.out.println("Turn: "+ chessMatch.getTurn());
+		System.out.println("Waiting player: "+chessMatch.getCurrentPlayer());
 	}
 	
 	public static void printBoard(ChessPiece[][] pieces) {
